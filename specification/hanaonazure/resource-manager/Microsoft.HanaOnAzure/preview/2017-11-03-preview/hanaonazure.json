@@ -322,12 +322,46 @@
             },
             "description": "Specifies the hardware settings for the HANA instance."
         },
+        "Disk": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The disk name."
+                },
+                "diskSizeGB": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "Specifies the size of an empty data disk in gigabytes."
+                },
+                "lun": {
+                    "readOnly": true,
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM."
+                }
+            },
+            "description": "Specifies the disk information fo the HANA instance"
+        },
         "StorageProfile": {
             "properties": {
                 "nfsIpAddress": {
                     "readOnly": true,
                     "type": "string",
                     "description": "IP Address to connect to storage."
+                },
+                "OSDisks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Disk"
+                    },
+                    "description": "Specifies the parameters that are used to add a data disks to a hana instance."
+                },
+                "dataDisks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Disk"
+                    },
+                    "description": "Specifies the parameters that are used to add a data disks to a hana instance."
                 }
             },
             "description": "Specifies the storage settings for the HANA instance disks."
