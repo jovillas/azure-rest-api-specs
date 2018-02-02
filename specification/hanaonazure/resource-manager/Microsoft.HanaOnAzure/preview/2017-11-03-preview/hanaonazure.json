@@ -354,8 +354,8 @@
                     "items": {
                         "$ref": "#/definitions/Disk"
                     },
-                    "description": "Specifies the parameters that are used to add a data disks to a hana instance."
-                },
+                    "description": "Specifies information about the operating system disk used by the hana instance."
+                }
             },
             "description": "Specifies the storage settings for the HANA instance disks."
         },
