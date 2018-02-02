@@ -356,13 +356,6 @@
                     },
                     "description": "Specifies the parameters that are used to add a data disks to a hana instance."
                 },
-                "dataDisks": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Disk"
-                    },
-                    "description": "Specifies the parameters that are used to add a data disks to a hana instance."
-                }
             },
             "description": "Specifies the storage settings for the HANA instance disks."
         },
