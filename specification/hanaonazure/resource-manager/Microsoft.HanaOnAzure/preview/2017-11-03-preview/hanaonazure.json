@@ -349,7 +349,7 @@
                     "type": "string",
                     "description": "IP Address to connect to storage."
                 },
-                "OSDisks": {
+                "osDisks": {
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/Disk"
